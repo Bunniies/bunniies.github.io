@@ -1,0 +1,35 @@
+project:
+  title: "Website"
+  type: website
+  #output-dir: docs
+  #execute-dir: project
+  resources: 
+    - "CNAME"
+    - "figs/"
+  #  - "www/cv/"
+  #  - "www/images"
+
+website:
+  title: "Alessandro Conigli"
+  page-navigation: true
+  favicon: /figs/favicon.ico
+  navbar:
+    logo: /figs/icon.ico
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "About"
+        file: about.qmd
+  
+  twitter-card: true
+        
+  page-footer: 
+    left: '© 2023, Alessandro Conigli'
+    right: 
+      - icon: house
+        href: index.qmd 
+      - icon: github
+        href: https://github.com/Bunniies
+      - icon: linkedin
+        href: https://medium.com/\@patrick.altmeyer
+        

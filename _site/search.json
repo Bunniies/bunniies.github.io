@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "This is the about me page",
+    "section": "",
+    "text": "This is the about me page"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello World, it’s Bunnies",
+    "section": "",
+    "text": "Hello World, it’s Bunnies\nThis is an example page\nAbout"
+  }
+]
