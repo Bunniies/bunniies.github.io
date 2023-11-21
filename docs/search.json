@@ -4,13 +4,55 @@
     "href": "about.html",
     "title": "This is the about me page",
     "section": "",
-    "text": "This is the about me page"
+    "text": "This is the about me page\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/about_me/about_me.html",
+    "href": "contents/about_me/about_me.html",
+    "title": "Alessandro Conigli",
+    "section": "",
+    "text": "PostDoctoral researcher in theoretical physics at Helmholtz Institute Mainz"
+  },
+  {
+    "objectID": "contents/about_me/about_me.html#experience",
+    "href": "contents/about_me/about_me.html#experience",
+    "title": "Alessandro Conigli",
+    "section": "Experience",
+    "text": "Experience"
+  },
+  {
+    "objectID": "contents/about_me/about_me.html#education",
+    "href": "contents/about_me/about_me.html#education",
+    "title": "Alessandro Conigli",
+    "section": "Education",
+    "text": "Education"
+  },
+  {
+    "objectID": "contents/about_me/index.html",
+    "href": "contents/about_me/index.html",
+    "title": "Alessandro Conigli",
+    "section": "",
+    "text": "PostDoctoral researcher in theoretical physics at Helmholtz Institute Mainz"
+  },
+  {
+    "objectID": "contents/about_me/index.html#experience",
+    "href": "contents/about_me/index.html#experience",
+    "title": "Alessandro Conigli",
+    "section": "Experience",
+    "text": "Experience"
+  },
+  {
+    "objectID": "contents/about_me/index.html#education",
+    "href": "contents/about_me/index.html#education",
+    "title": "Alessandro Conigli",
+    "section": "Education",
+    "text": "Education"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Hello World, it’s Bunnies",
     "section": "",
-    "text": "Hello World, it’s Bunnies\nThis is an example page\nAbout"
+    "text": "Hello World, it’s Bunnies\nThis is an example page\n\n\n\n\n Back to top"
   }
 ]

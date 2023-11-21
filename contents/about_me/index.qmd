@@ -1,0 +1,16 @@
+---
+title: "Alessandro Conigli"
+about: 
+    template: jolla
+    image-shape: round
+    image: /figs/my_pic.jpeg
+    links:
+      - icon: github
+        href: https://github.com/Bunniies
+      - icon: linkedin
+        href: https://www.linkedin.com/in/alessandro-conigli-81078a195/
+      
+---
+
+{{< include about_me.qmd >}}
+

@@ -12,7 +12,10 @@ project:
 
 website:
   title: "Alessandro Conigli"
+  site-url: "https://bunniies.github.io"
   page-navigation: true
+  back-to-top-navigation: true
+  reader-mode: true
   favicon: /figs/favicon.ico
   navbar:
     logo: /figs/icon.ico
@@ -20,17 +23,25 @@ website:
       - text: "Home"
         file: index.qmd
       - text: "About"
-        file: about.qmd
-  
+        file: contents/about_me/index.qmd
+      - text: "Blog"
+        menu:
+          - text: "test 1"
+            icon: /figs/icon.ico
+            file: about.qmd
+          - text: "test 2"
+            file: about.qmd
+
   twitter-card: true
         
   page-footer: 
+    background: light
     left: '© 2023, Alessandro Conigli'
     right: 
       - icon: house
-        href: index.qmd 
+        href: https://bunniies.github.io
       - icon: github
         href: https://github.com/Bunniies
       - icon: linkedin
-        href: https://medium.com/\@patrick.altmeyer
+        href: https://www.linkedin.com/in/alessandro-conigli-81078a195/
         
