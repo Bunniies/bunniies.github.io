@@ -1,0 +1,16 @@
+---
+title: "Light meson physics and scale setting from a mixed action with Wilson twisted mass valence quarks"
+date: '2022-05-16'
+Published in: "Proceedings of Science"
+categories:
+  - flavour physics
+  - scale setting
+  - lattice QCD  
+---
+
+## Abstract
+
+We consider a mixed action approach where valence Wilson twisted mass (Wtm) fermions at maximal twist are combined with CLS ensembles consisting of $N_f=2+1$ flavours of $O(a)$-improved Wilson sea quarks. We present an update of the results of the matching of valence and sea quarks, and of the subsequent continuum-limit scaling studies of light-quark observables. A scale setting procedure combining the results from the $O(a)$-improved Wilson setup to the ones from the valence Wtm regularisation is discussed.
+
+
+**Full paper**: please download the available versions [here](https://inspirehep.net/literature/2096870).

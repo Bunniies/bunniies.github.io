@@ -1,7 +1,7 @@
 ---
 title: "Alessandro Conigli"
 about: 
-    template: jolla
+    template: trestles
     image-shape: round
     image: /figs/my_pic.jpeg
     links:

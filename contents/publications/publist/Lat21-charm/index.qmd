@@ -1,0 +1,16 @@
+---
+title: "Charm physics with a tmQCD mixed action"
+date: '2021-12-01'
+Published in: "Proceedings of Science"
+categories:
+  - flavour physics
+  - charm physics
+  - lattice QCD  
+---
+
+## Abstract
+
+We report on our ongoing determination of the charm quark mass and the masses and decay constants of various charmed mesons, obtained within a mixed-action setup. We employ $N_f=2+1$ CLS ensembles combined with a Wilson twisted mass valence action that eliminates the leading $O(a)$ effects from our target observables. Alongside our preliminary results, we will discuss an exploration of GEVP techniques aimed at optimizing the precision in view of the extension of the computation to heavier quark masses. We study the chiral-continuum extrapolation of decay constants for charm quark observables and the renormalized charm quark mass.
+
+
+**Full paper**: please download the available versions [here](https://arxiv.org/abs/2112.00666).

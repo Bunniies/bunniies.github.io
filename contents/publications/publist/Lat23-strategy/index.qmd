@@ -1,0 +1,15 @@
+---
+title: "A strategy for B-physics observables in the continuum limit"
+date: '2023-12-15'
+Published in: "Proceedings of Science"
+categories:
+  - flavour physics
+  - B-physics
+  - lattice QCD  
+---
+
+## Abstract
+
+In a somewhat forgotten paper [[1]](https://inspirehep.net/literature/763911) it was shown how to perform interpolations between relativistic and static computations in order to obtain results for heavy-light observables for masses from, say, $m_{\mathrm{charm}}$ to $m_{\mathrm{bottom}}$. All quantities are first continuum extrapolated and then interpolated in  $1/m_h = 1 / m_{\mathrm{heavy}}$. Large volume computations are combined with finite volume ones where a relativistic bottom quark is accessible with small $am_{\mathrm{bottom}}$. We discuss how this strategy is extended to semi-leptonic form factors and other quantities of phenomenological interest. The essential point is to form quantities where the limit $m_h\to \infty$ is approached with power corrections $O(1/m_h)$ only. Perturbative corrections $\sim \alpha_s(m_h)^{\gamma + n }$ are cancelled in the construction of the observables. We also point out how such an approach can help to control systematics in semi-leptonic decays with just large volume data. First numerical results with $N_f=2+1$ and lattice spacings down to 0.039 fm are presented in [[2]](https://inspirehep.net/literature/2737610).
+
+**Full paper**: please download the available versions [here](https://inspirehep.net/literature/2737639).

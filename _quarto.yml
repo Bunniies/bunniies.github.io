@@ -31,6 +31,8 @@ website:
             file: about.qmd
           - text: "test 2"
             file: about.qmd
+      - text: "Publications"
+        file: contents/publications/index.qmd
 
   twitter-card: true
         

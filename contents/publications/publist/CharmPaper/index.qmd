@@ -1,0 +1,16 @@
+---
+title: "Hadronic physics from a Wilson fermion mixed-action approach: Charm quark mass and $D_{(s)}$ meson decay constants"
+date: '2023-09-25'
+Published in: "preprint"
+categories:
+  - flavour physics
+  - charm physics
+  - lattice QCD  
+---
+
+## Abstract
+
+We present our first set of results for charm physics, using the mixed-action setup introduced in a companion paper. Maximally twisted Wilson valence fermions are used on a sea of non-perturbatively $O(a)$-improved Wilson fermions, made up by CLS $N_f=2+1$ ensembles. Our charm-sector observables are free from $O(am_c)$ discretisation effects, without need of tuning any improvement coefficient, and show continuum-limit scaling properties consistent with leading cutoff effects of $O(a^2)$. We consider a subset of CLS ensembles -- including four values of the lattice spacing and pion masses down to 200 MeV -- allowing to take the continuum limit and extrapolate to the physical pion mass. A number of techniques are incorporated in the analysis in order to estimate the systematic uncertainties of our results for the charm quark mass and the  $D_{(s)}$-meson decay constants. This first study of observables in the charm sector, where the emphasis has been on the control of the methodology, demonstrates the potential of our setup to achieve high-precision results.
+
+
+**Full paper**: please download the available versions [here](https://arxiv.org/abs/2309.14154).

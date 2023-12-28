@@ -1,0 +1,18 @@
+---
+title: "$m_B$ and $f_{B^{(*)}}$ in $2+1$ flavour QCD from a combination of continuum limit static and relativistic results"
+date: '2023-12-15'
+Published in: "Proceedings of Science"
+categories:
+  - flavour physics
+  - B-physics
+  - lattice QCD  
+---
+
+## Abstract
+
+
+We present preliminary results for B-physics from a combination of non-perturbative results in the static limit with relativistic computations satisfying $am_{\mathrm{heavy}}\ll 1$. Relativistic measurements are carried out at the physical b-quark mass using the Schrödinger Functional in a 
+$0.5 \ \mathrm{fm}$ box. They are connected to large volume observables through step scaling functions that trace the mass dependence between the physical charm region and the static limit, such that B-physics results can be obtained by interpolation; the procedure is designed to exactly cancel the troublesome $\alpha_s(m_{\mathrm{heavy}})^{\gamma + n }$ corrections to large mass scaling. Large volume computations for both static and relativistic quantities use CLS $N_f=2+1$ ensembles at $m_u=m_d=m_s$, and with five values of the lattice spacing down to 
+$0.039 \ \mathrm{fm}$. Our preliminary results for the b-quark mass and leptonic decay constants have competitive uncertainties, which are furthermore dominated by statistics, allowing for substantial future improvement. Here we focus on numerical results, while the underlying strategy is discussed in a companion contribution [[1]](https://inspirehep.net/literature/2737639).
+
+**Full paper**: please download the available versions [here](https://inspirehep.net/literature/2737610).

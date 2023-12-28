@@ -1,0 +1,16 @@
+---
+title: "Towards precision charm physics with a mixed action"
+date: '2022-12-20'
+Published in: "Proceedings of Science"
+categories:
+  - flavour physics
+  - charm physics
+  - lattice QCD  
+---
+
+## Abstract
+
+We report on our first set of results for charm physics, using a mixed-action setup with maximally twisted valence fermions on CLS $N_f=2+1$ ensembles.This set up avoids the need of improvement coefficients to subtract $O(am_c$ effects. The charm quark mass, $D$ and $D_s$ decay constants are computed on a subset of CLS ensembles, which allows to take the continuum limit and extrapolate to the physical pion mass, and assess the scaling properties. Special attention is paid to the implementation of techniques to deal with systematic uncertainties. Our results show excellent prospects for high-precision computations on the full set of ensembles.  
+
+
+**Full paper**: please download the available versions [here](https://arxiv.org/abs/2212.11045).

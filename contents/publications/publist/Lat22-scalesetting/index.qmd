@@ -1,0 +1,16 @@
+---
+title: "Scale Setting from a Mixed Action with Twisted Mass Valence Quarks"
+date: '2022-12-20'
+Published in: "Proceedings of Science"
+categories:
+  - flavour physics
+  - scale setting
+  - lattice QCD  
+---
+
+## Abstract
+
+We present preliminary results for a scale setting procedure based on a mixed action strategy consisting of Wilson twisted mass valence fermions at maximal twist on CLS ensembles with $N_f=2+1$ flavours of $O(a)$-improved Wilson sea quarks. Once the matching of valence and sea quark masses is performed, universality tests are carried out by comparing the continuum-limit results of the mixed action setup to those of the regularisation based solely on $O(a)$-improved Wilson fermions. The scale setting uses the pion and kaon decay constants, in units of the gradient flow scale $t_0$, obtained from combining computations with the unitary Wilson action and the mixed action. The proper isolation of ground states as well as the continuum-chiral extrapolations are evaluated through model variation techniques. An update on the determination of $t_0$ will be presented.
+
+
+**Full paper**: please download the available versions [here](https://inspirehep.net/literature/2624822).

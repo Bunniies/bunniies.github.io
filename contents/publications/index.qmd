@@ -1,0 +1,15 @@
+---
+title: Publications
+listing:
+  contents: publist
+  sort: "date desc"
+  type: table
+  table-hover: true
+  categories: true
+  fields: [title, Published in, date]
+  image-align: right
+  date-format: "YYYY"
+---
+
+Here is a list of featured publications.  
+For more details see my [hep-inspire](https://inspirehep.net/authors/1899376?ui-citation-summary=true) or [Google scholar](https://scholar.google.com/citations?user=W1XiYmQAAAAJ&hl=it&oi=ao) profiles.

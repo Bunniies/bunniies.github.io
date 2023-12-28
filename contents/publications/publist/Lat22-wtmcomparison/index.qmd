@@ -1,0 +1,15 @@
+---
+title: "A comparison of Wilson and twisted mass valence quarks for charmed semileptonic form factors"
+date: '2023-01-25'
+Published in: "Proceedings of Science"
+categories:
+  - flavour physics
+  - lattice QCD  
+---
+
+## Abstract
+
+We present two calculations of heavy quark physics, with respectively non-perturbatively improved Wilson and twisted mass Wilson fermions, both on $N_f=2+1$ CLS configurations with open boundary conditions. We evaluate those discretisations through a Ward identity on the three-point functions. We also check the universality of our continuum results. All our results are compatible with an \orderof(a^2) scaling for both actions.
+
+
+**Full paper**: please download the available versions [here](https://inspirehep.net/literature/2634524).
