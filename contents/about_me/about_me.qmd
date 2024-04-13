@@ -1,4 +1,11 @@
-PostDoctoral researcher in **theoretical particle  physics** at [Helmholtz Institute Mainz](https://www.hi-mainz.de)
+PostDoctoral researcher in **theoretical particle  physics** at [Helmholtz Institute Mainz](https://www.hi-mainz.de). My research is focused on the non-perturbative aspects of Quantum Chromodynamics (QCD), a theory describing the strong interaction in fundamental particle physics. My work is performed with lattice field theory techniques to tackle the non-perturbative phenomena of QCD. In Lattice QCD the continuum space-time is discretized  onto a grid-like structure, allowing to perform numerical simulations in large-scale computational facilities to solve the QCD equations. This approach is particularly useful for understanding phenomena at low energies, where perturbative methods may not be as effective.
+
+A list of main topics includes: 
+
+- Lattice QCD.  
+- Hadronic Vacuum Polarization, related to the [g-2](https://muon-g-2.fnal.gov) experiment at Fermilab. \n 
+- Hadronic weak matrix elements.  
+- Computational physics.  
 
 ## Experience
 - **[Helmholtz Institute Mainz](https://www.hi-mainz.de)**, Mainz (DE)  

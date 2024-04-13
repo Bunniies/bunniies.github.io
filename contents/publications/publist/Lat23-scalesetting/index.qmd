@@ -1,0 +1,15 @@
+---
+title: "Determination of the Gradient Flow Scale $t_0$ from a Mixed Action with Wilson Twisted Mass Valence Quarks"
+date: '2024-01-21'
+Published in: "Proceedings of Science"
+categories:
+  - flavour physics
+  - lattice QCD  
+---
+
+## Abstract
+We perform the scale setting procedure of a mixed action setup consisting of valence Wilson twisted mass fermions at maximal twist on CLS ensembles with $N_f=2+1$ flavours of $O(a)$-improved Wilson sea quarks. We determine the gradient flow scale $t_0$​	
+using pion and kaon masses and decay constants in the isospin symmetric limit of QCD as external physical input. We employ model variation techniques to explore the systematic uncertainties in the extraction of the ground state signal of lattice observables, as well as for the continuum-chiral extrapolations. We observe that the combined analysis of the mixed action data with that based on $O(a)$-improved Wilson valence quarks, provides an improved control of the extrapolation of $t_0$ to the physical point.
+
+
+**Full paper**: please download the available versions [here](https://inspirehep.net/literature/2750409).

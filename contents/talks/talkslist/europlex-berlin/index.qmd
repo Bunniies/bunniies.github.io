@@ -1,0 +1,15 @@
+---
+title: "B physics observables in the continuum from a combination of static and relativistic results"
+date: '2023-09-15'
+Venue: "Humboldt-Universität zu Berlin"
+categories:
+  - flavour physics
+  - bottom physics
+  - lattice QCD  
+---
+
+The [EuroPLEx](https://europlex.unipr.it) network international conference at Humboldt-Universität zu Berlin
+
+You can find the slides at the following [link](https://indico.desy.de/event/38889/contributions/152036/).
+
+

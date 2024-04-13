@@ -1,0 +1,15 @@
+---
+title: Talks
+listing:
+  contents: talkslist
+  sort: "date desc"
+  type: table
+  table-hover: true
+  categories: true
+  fields: [title, Venue, date]
+  image-align: right
+  date-format: "YYYY"
+---
+
+Here is a list of talks at difference Conferences.  
+For the related papers see my [hep-inspire](https://inspirehep.net/authors/1899376?ui-citation-summary=true) or [Google scholar](https://scholar.google.com/citations?user=W1XiYmQAAAAJ&hl=it&oi=ao) profiles.

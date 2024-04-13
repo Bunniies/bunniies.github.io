@@ -1,0 +1,15 @@
+---
+title: "Heavy flavour physics with CLS ensembles"
+date: '2022-04-28'
+Venue: "CP3-Origins, Odense, Denmark"
+categories:
+  - flavour physics
+  - bottom physics
+  - lattice QCD  
+---
+
+The [EuroPLEx](https://europlex.unipr.it) network progress workshop in Odense, Denmark
+
+You can find more details at the following [link](https://europlex.unipr.it/network-events/odense-2022-europlex-progress-workshop/).
+
+

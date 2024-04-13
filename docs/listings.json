@@ -2,6 +2,7 @@
   {
     "listing": "/contents/publications/index.html",
     "items": [
+      "/contents/publications/publist/Lat23-scalesetting/index.html",
       "/contents/publications/publist/Lat23-results/index.html",
       "/contents/publications/publist/Lat23-strategy/index.html",
       "/contents/publications/publist/CharmPaper/index.html",
@@ -10,6 +11,23 @@
       "/contents/publications/publist/Lat22-scalesetting/index.html",
       "/contents/publications/publist/Lat21-scalesetting/index.html",
       "/contents/publications/publist/Lat21-charm/index.html"
+    ]
+  },
+  {
+    "listing": "/contents/talks/index.html",
+    "items": [
+      "/contents/talks/talkslist/europlex-berlin/index.html",
+      "/contents/talks/talkslist/lat23/index.html",
+      "/contents/talks/talkslist/lat22/index.html",
+      "/contents/talks/talkslist/europlex-odense/index.html",
+      "/contents/talks/talkslist/zaragoza/index.html",
+      "/contents/talks/talkslist/lat21/index.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/articles/three-bodies-problem/index.html"
     ]
   }
 ]

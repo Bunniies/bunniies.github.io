@@ -1,0 +1,16 @@
+---
+title: "$m_B$ and $f_{B^(*)}$ on $2+1$ flavor QCD from a combination of continuum limit static and relativistic results"
+date: '2023-08-02'
+Venue: "Femilab, Batavia (IL), USA"
+categories:
+  - flavour physics
+  - bottom physics
+  - lattice QCD  
+---
+
+The 40th International Symposium on Lattice Field Theory at Fermilab, Batavia, Illinois (USA).
+
+You can find the slides at the following [link](https://indico.fnal.gov/event/57249/contributions/270692/).
+
+Alternatively, the conference paper is available [here](https://inspirehep.net/literature/2737610).
+

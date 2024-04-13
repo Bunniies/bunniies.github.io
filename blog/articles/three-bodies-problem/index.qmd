@@ -1,0 +1,73 @@
+---
+title: "The three-body problem"
+subtitle: "A chaotic dynamical system"
+date: '05-04-2024'
+description: |
+    The three-body problem in classical mechanics is an example of a chaotic dynamical system that puzzled physisics for centuries. This post gives an overview of the problem in celestial mechanics and provides a Julia code for numerical simulation. Are there any long term stable solutions?
+categories:
+  - physics
+  - numerical simulations
+  - Julia
+image: www/chaotic.gif
+execute:
+  eval: false
+  echo: true
+draft: false
+---
+
+<div class="intro-gif">
+  <figure>
+    <img src="www/youarebugs.webp">
+    <figcaption>A scene from the series. Source: Netflix</figcaption>
+  </figure>
+</div> 
+
+Recently the streaming platform Netflix released the Three-body problem, an eight episodes sci-fi series based on Liu Cixin's trilogy, the Remembrance of Earth's Past. The series portrays, jumping from past, present and future, the interaction between the human race and an alien civilization living in a  nearby star system . One of the main charachters soon realizes that the foreign culture lives in a three-body star system, where stable eras characterised by development and prosperity are followed by unpredictable chaotic eras where survival is almost impossible. In short, the technologically advanced creatures, tired of seeing their species threatened with extinction, come to the city seeking prosperity in a stable solar system at the expense of human survival. The story is based on a real nearby star system called Alpha Centauri. Located about 4 light-years from Earth, it's the closest  star system to us. It contains three stars: Alpha Centauri A and Alpha Centauri B, with masses similar to our sun, and a further red dwarf, Proxima Centauri, which has two planets orbiting it.
+    
+The three-body problem is a classical mechanics example of a chaotic dinamical system that puzzled and fascinated physicists for
+centuries. The difficulty is to predict with accuracy the dynamical evolution of the constituent bodies through the Newton's law of universal gravitation. It turns out that the system is chaotic for the majority of conditions, and only a few stable solutions exists. As a result, numerical methods are required to solve the equations of motion. In this post we review the mathematical formulation of the problem, providing a [`Julia`](https://julialang.org) implementation for numerical integration.
+
+
+## The three-body problem
+
+
+<div class="intro-gif">
+  <figure>
+    <img src="www/conic_sections.png">
+    <figcaption>**Figure 1**: Illustration of conic sections by slicing \
+     a cone at different angles. Source: <a href="https://theory.labster.com/conic_sections/">Labster</a></figcaption>
+  </figure>
+</div> 
+At the end of the seventeenth century the English physicist and mathematician Isaac Newton formulated in his work *Philosophiæ Naturalis Principia Mathematica* the law of universal gravitation, thus opening the door to celestial mechanics. Using Newton's law of motion it is possible to compute exactly the orbits described by two gravitational interacting bodies. The allowed shapes for these orbits are obtained by slicing at different angles the conic sections, as illustrated in Figure 1.
+As we all know, the Earth describes an elliptic orbit under the Sun gravitational field.  Newton's law works just fine as long as we consider two interacting bodies in a closed system, therefore neglecting interactions with other celestial bodies. However as an additional  object is introduced,  small changes on the initial positions and velocities of the three bodies give rise to distinct dynamical evoulutions, and the system enter a chaotic phase where orbits do not follow a clear path and become  unpredictables in the long term. There is no analytic formula that gives us instant by instant positions and velocities of the three bodies. This is known as the three body problem, a special case of the more general $n$-body problem. In what follows we stick to $n=3$.
+
+::: {.callout-note}
+
+## Note
+
+If the $n$-body problem with $n>2$ is a chaotic system, why do we live in a stable solar system with $8$ planets and several celestial bodies orbiting around our star? The reason is simple: our sun contains roughly $99.8\%$ of the mass of the solar system! As a result, the gravitational interactions among planets are by far subleading
+
+:::
+
+
+### Mathematical formulation
+Before jumping to the mathematical formulation of the three body problem, let us review the Newton's law of universal gravitation: two massive bodies attracts each other with a force that is proportional to the product of their masses and inversely proportianal to the square of their distance. Let's assume  $m_1$  and $m_2$  to be the masses of the two bodies, located in space at postion $\mathbf{r}_1$ and $\mathbf{r}_2$, with $\mathbf{r}_i=(x_i, y_i, z_i)$ being a vector position with three spacial components. Together with Newton's second law of motion $F=ma$, the equation describing the dynamics of the body $m_1$ under the gravitational influence of $m_2$ thus takes the form
+
+$$
+F_1 = m_1\mathbf{\ddot r}_1 = -G \frac{m_1m_2}{(\mathbf{r}_1 - \mathbf{r_2})^2}.
+$$
+Here $G$ is the gravitational constant, while  $mathbf{\ddot r}_1$  is the  body acceleration expressed in terms of the second temporal derivative of the position 
+
+$$
+ \mathbf{\ddot r}_1 =  - Gm_3\frac{\mathbf{r}_{1}-\mathbf{r}_3}{|\mathbf{r}_{1}-\mathbf{r}_3|^3} - Gm_2\frac{\mathbf{r}_{1}-\mathbf{r}_2}{|\mathbf{r}_{1}-\mathbf{r}_2|^3}
+$$
+$$
+\mathbf{\ddot r}_2 =   - Gm_1\frac{\mathbf{r}_{2}-\mathbf{r}_1}{|\mathbf{r}_{2}-\mathbf{r}_1|^3} - Gm_3\frac{\mathbf{r}_{2}-\mathbf{r}_3}{|\mathbf{r}_{2}-\mathbf{r}_3|^3}
+$$
+$$
+\mathbf{\ddot r}_3 =   - Gm_2\frac{\mathbf{r}_{3}-\mathbf{r}_1}{|\mathbf{r}_{3}-\mathbf{r}_1|^3} -Gm_1\frac{\mathbf{r}_{3}-\mathbf{r}_1}{|\mathbf{r}_{3}-\mathbf{r}_1|^3}
+$$
+
+Our goal is to determine the positions and velocieties of the three bodies at some time $t$ by solving numerically the above equations, given some initial conditions $\mathbf{r}_i(t_0), \ \mathbf{\dot r}_i(t_0)$ at $t_0=0$
+
+### hey

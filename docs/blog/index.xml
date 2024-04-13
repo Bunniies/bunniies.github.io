@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Alessandro Conigli</title>
+<link>https://bunniies.github.io/blog/index.html</link>
+<atom:link href="https://bunniies.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.3.450</generator>
+<lastBuildDate>Fri, 03 May 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>The three-body problem</title>
+  <link>https://bunniies.github.io/blog/articles/three-bodies-problem/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<div class="intro-gif">
+<figure class="figure">
+<img src="https://bunniies.github.io/blog/articles/three-bodies-problem/www/youarebugs.webp" class="figure-img">
+<figcaption class="figure-caption">
+A scene from the series. Source: Netflix
+</figcaption>
+</figure>
+</div>
+<p>Recently the streaming platform Netflix released the Three-body problem, an eight episodes sci-fi series based on Liu Cixin’s trilogy, the Remembrance of Earth’s Past. The series portrays, jumping from past, present and future, the interaction between the human race and an alien civilization living in a nearby star system . One of the main charachters soon realizes that the foreign culture lives in a three-body star system, where stable eras characterised by development and prosperity are followed by unpredictable chaotic eras where survival is almost impossible. In short, the technologically advanced creatures, tired of seeing their species threatened with extinction, come to the city seeking prosperity in a stable solar system at the expense of human survival. The story is based on a real nearby star system called Alpha Centauri. Located about 4 light-years from Earth, it’s the closest star system to us. It contains three stars: Alpha Centauri A and Alpha Centauri B, with masses similar to our sun, and a further red dwarf, Proxima Centauri, which has two planets orbiting it.</p>
+<p>The three-body problem is a classical mechanics example of a chaotic dinamical system that puzzled and fascinated physicists for centuries. The difficulty is to predict with accuracy the dynamical evolution of the constituent bodies through the Newton’s law of universal gravitation. It turns out that the system is chaotic for the majority of conditions, and only a few stable solutions exists. As a result, numerical methods are required to solve the equations of motion. In this post we review the mathematical formulation of the problem, providing a <a href="https://julialang.org"><code>Julia</code></a> implementation for numerical integration.</p>
+<section id="the-three-body-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-three-body-problem">The three-body problem</h2>
+<div class="intro-gif">
+<figure class="figure">
+<img src="https://bunniies.github.io/blog/articles/three-bodies-problem/www/conic_sections.png" class="figure-img">
+<figcaption class="figure-caption">
+<strong>Figure 1</strong>: Illustration of conic sections by slicing<br>
+a cone at different angles. Source: <a href="https://theory.labster.com/conic_sections/">Labster</a>
+</figcaption>
+</figure>
+</div>
+<p>At the end of the seventeenth century the English physicist and mathematician Isaac Newton formulated in his work <em>Philosophiæ Naturalis Principia Mathematica</em> the law of universal gravitation, thus opening the door to celestial mechanics. Using Newton’s law of motion it is possible to compute exactly the orbits described by two gravitational interacting bodies. The allowed shapes for these orbits are obtained by slicing at different angles the conic sections, as illustrated in Figure 1. As we all know, the Earth describes an elliptic orbit under the Sun gravitational field. Newton’s law works just fine as long as we consider two interacting bodies in a closed system, therefore neglecting interactions with other celestial bodies. However as an additional object is introduced, small changes on the initial positions and velocities of the three bodies give rise to distinct dynamical evoulutions, and the system enter a chaotic phase where orbits do not follow a clear path and become unpredictables in the long term. There is no analytic formula that gives us instant by instant positions and velocities of the three bodies. This is known as the three body problem, a special case of the more general <img src="https://latex.codecogs.com/png.latex?n">-body problem. In what follows we stick to <img src="https://latex.codecogs.com/png.latex?n=3">.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the <img src="https://latex.codecogs.com/png.latex?n">-body problem with <img src="https://latex.codecogs.com/png.latex?n%3E2"> is a chaotic system, why do we live in a stable solar system with <img src="https://latex.codecogs.com/png.latex?8"> planets and several celestial bodies orbiting around our star? The reason is simple: our sun contains roughly <img src="https://latex.codecogs.com/png.latex?99.8%5C%25"> of the mass of the solar system! As a result, the gravitational interactions among planets are by far subleading</p>
+</div>
+</div>
+<section id="mathematical-formulation" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-formulation">Mathematical formulation</h3>
+<p>Before jumping to the mathematical formulation of the three body problem, let us review the Newton’s law of universal gravitation: two massive bodies attracts each other with a force that is proportional to the product of their masses and inversely proportianal to the square of their distance. Let’s assume <img src="https://latex.codecogs.com/png.latex?m_1"> and <img src="https://latex.codecogs.com/png.latex?m_2"> to be the masses of the two bodies, located in space at postion <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Br%7D_1"> and <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Br%7D_2">, with <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Br%7D_i=(x_i,%20y_i,%20z_i)"> being a vector position with three spacial components. Together with Newton’s second law of motion <img src="https://latex.codecogs.com/png.latex?F=ma">, the equation describing the dynamics of the body <img src="https://latex.codecogs.com/png.latex?m_1"> under the gravitational influence of <img src="https://latex.codecogs.com/png.latex?m_2"> thus takes the form</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AF_1%20=%20m_1%5Cmathbf%7B%5Cddot%20r%7D_1%20=%20-G%20%5Cfrac%7Bm_1m_2%7D%7B(%5Cmathbf%7Br%7D_1%20-%20%5Cmathbf%7Br_2%7D)%5E2%7D.%0A"> Here <img src="https://latex.codecogs.com/png.latex?G"> is the gravitational constant, while <img src="https://latex.codecogs.com/png.latex?mathbf%7B%5Cddot%20r%7D_1"> is the body acceleration expressed in terms of the second temporal derivative of the position</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbf%7B%5Cddot%20r%7D_1%20=%20%20-%20Gm_3%5Cfrac%7B%5Cmathbf%7Br%7D_%7B1%7D-%5Cmathbf%7Br%7D_3%7D%7B%7C%5Cmathbf%7Br%7D_%7B1%7D-%5Cmathbf%7Br%7D_3%7C%5E3%7D%20-%20Gm_2%5Cfrac%7B%5Cmathbf%7Br%7D_%7B1%7D-%5Cmathbf%7Br%7D_2%7D%7B%7C%5Cmathbf%7Br%7D_%7B1%7D-%5Cmathbf%7Br%7D_2%7C%5E3%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbf%7B%5Cddot%20r%7D_2%20=%20%20%20-%20Gm_1%5Cfrac%7B%5Cmathbf%7Br%7D_%7B2%7D-%5Cmathbf%7Br%7D_1%7D%7B%7C%5Cmathbf%7Br%7D_%7B2%7D-%5Cmathbf%7Br%7D_1%7C%5E3%7D%20-%20Gm_3%5Cfrac%7B%5Cmathbf%7Br%7D_%7B2%7D-%5Cmathbf%7Br%7D_3%7D%7B%7C%5Cmathbf%7Br%7D_%7B2%7D-%5Cmathbf%7Br%7D_3%7C%5E3%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbf%7B%5Cddot%20r%7D_3%20=%20%20%20-%20Gm_2%5Cfrac%7B%5Cmathbf%7Br%7D_%7B3%7D-%5Cmathbf%7Br%7D_1%7D%7B%7C%5Cmathbf%7Br%7D_%7B3%7D-%5Cmathbf%7Br%7D_1%7C%5E3%7D%20-Gm_1%5Cfrac%7B%5Cmathbf%7Br%7D_%7B3%7D-%5Cmathbf%7Br%7D_1%7D%7B%7C%5Cmathbf%7Br%7D_%7B3%7D-%5Cmathbf%7Br%7D_1%7C%5E3%7D%0A"></p>
+<p>Our goal is to determine the positions and velocieties of the three bodies at some time <img src="https://latex.codecogs.com/png.latex?t"> by solving numerically the above equations, given some initial conditions <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Br%7D_i(t_0),%20%5C%20%5Cmathbf%7B%5Cdot%20r%7D_i(t_0)"> at <img src="https://latex.codecogs.com/png.latex?t_0=0"></p>
+</section>
+<section id="hey" class="level3">
+<h3 class="anchored" data-anchor-id="hey">hey</h3>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>physics</category>
+  <category>numerical simulations</category>
+  <category>Julia</category>
+  <guid>https://bunniies.github.io/blog/articles/three-bodies-problem/index.html</guid>
+  <pubDate>Fri, 03 May 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://bunniies.github.io/blog/articles/three-bodies-problem/www/chaotic.gif" medium="image" type="image/gif"/>
+</item>
+</channel>
+</rss>

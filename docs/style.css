@@ -1,0 +1,31 @@
+/* Intro gif */
+.intro-gif figure {
+    float: right;
+    margin-top: 0px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.intro-gif img {
+    padding: 15px 15px 5px 15px;
+    width: 300px;
+    height: 300px;
+}
+
+/* Disclaimer */
+.disclaimer {
+    padding: 1em;
+    background: #67534c;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+/* Note */
+.note {
+    padding: 1em;
+    background: #504c67;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}

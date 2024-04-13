@@ -1,8 +1,9 @@
 ---
 title: "Alessandro Conigli"
 about: 
-    template: trestles
+    template: solana
     image-shape: round
+    image-width: 10em
     image: /figs/my_pic.jpeg
     links:
       - icon: github

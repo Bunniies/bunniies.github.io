@@ -1,0 +1,14 @@
+/*-- scss:defaults --*/
+// Base document colors
+$julia-blue: #4063D8;
+$julia-dark: #03001e;
+$primary: $julia_dark;
+$body-bg: lighten($primary, 0%);
+$body-color: white;
+$link-color: lighten($julia-blue, 0%);
+
+// Navbar
+$navbar-bg: lighten($primary, 30%);
+
+// Footer
+$footer-bg: lighten($primary, 30%);

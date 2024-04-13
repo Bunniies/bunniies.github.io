@@ -25,14 +25,20 @@ website:
       - text: "About"
         file: contents/about_me/index.qmd
       - text: "Blog"
+        file: blog/index.qmd
+      - text: Research
         menu:
-          - text: "test 1"
-            icon: /figs/icon.ico
-            file: about.qmd
-          - text: "test 2"
-            file: about.qmd
-      - text: "Publications"
-        file: contents/publications/index.qmd
+          - text: "Publications"
+            file: contents/publications/index.qmd
+          - text: "Talks"
+            file: contents/talks/index.qmd
+      # - text: "Publications"
+        # file: contents/publications/index.qmd
+    right: 
+      - icon: github
+        href: https://github.com/Bunniies
+      - icon: linkedin
+        href: https://www.linkedin.com/in/alessandro-conigli-81078a195/
 
   twitter-card: true
         
@@ -47,3 +53,12 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/alessandro-conigli-81078a195/
         
+
+format:
+  html:
+    theme:
+      light: flatly #themes-light.scss
+      dark: darkly #themes-dark.scss
+    css: style.css
+    toc: true
+jupyter: julia-1.9

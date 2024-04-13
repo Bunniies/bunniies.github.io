@@ -1,0 +1,16 @@
+---
+title: "Charm physics with tmQCD mixed action"
+date: '2021-08-29'
+Venue: "online@MIT"
+categories:
+  - flavour physics
+  - charm physics
+  - lattice QCD  
+---
+
+The 38th International Symposium on Lattice Field Theory  at zoom/gather@MIT
+
+You can find the slides at the following [link](https://indico.cern.ch/event/1006302/contributions/4376559/).
+
+Alternatively, the conference paper is available [here](https://arxiv.org/abs/2112.00666).
+

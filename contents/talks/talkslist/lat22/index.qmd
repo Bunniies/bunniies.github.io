@@ -1,0 +1,16 @@
+---
+title: "Towards precision charm physics with a mixed action"
+date: '2022-08-10'
+Venue: "Bonn, Germany"
+categories:
+  - flavour physics
+  - charm physics
+  - lattice QCD  
+---
+
+The 39th International Symposium on Lattice Field Theory in Bonn, Germany. 
+
+You can find the slides at the following [link](https://indico.hiskp.uni-bonn.de/event/40/contributions/822/).
+
+Alternatively, the conference paper is available [here](https://arxiv.org/abs/2212.11045).
+

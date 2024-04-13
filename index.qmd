@@ -2,7 +2,21 @@
 title: ""
 toc: false
 ---
-# Hello World, it's Bunnies 
+# Welcome!
 
-This is an example page
+I am a PostDoc researcher in **theoretical particle physics** at [Helmholtz Institute Mainz](https://www.hi-mainz.de). With a background in theoretical physics and a Ph.D. in Lattice QCD, a well-established approach to tackle the non-perturbative phenomena of Quantum Chromodynamics (QCD), my research employes advanced computational techniques to simulate the behaviour of subatomic particles. In Lattice QCD the continuum space-time is discretized  onto a grid-like structure, allowing to perform numerical simulations in large-scale computational facilities to solve the QCD equations, sheding lights on the dynamics of the strong nuclear force.
 
+My research interests include: 
+
+- Lattice QCD
+- Particle Phenomenology  
+- Hadronic Vacuum Polarization, in the context of [g-2](https://muon-g-2.fnal.gov) experiment at Fermilab
+- Machine Learning in particle physics
+- Computational physics
+
+
+
+## News
+
+- In my most recent [post](/blog/articles/three-bodies-problem/index.qmd) I give an overview of the Three-body problem in classical mechanics, providing [Julia](https://julialang.org) implementation for its numerical solutions. 
+- On the 28th of September 2023 I defended my Ph.D thesis at the [Instituto de Física Teórica](https://www.ift.uam-csic.es/en) in Madrid, Spain with a thesis entitled *"First-principles calculations of Standard Model parameters at the charm scale and beyond"*. Check out [here](https://www.ift.uam-csic.es/en/events/first-principles-calculations-standard-model-parameters-charm-scale-and-beyond) for additional details!

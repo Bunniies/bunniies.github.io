@@ -1,0 +1,12 @@
+---
+title: "B to pi form factors with step scaling techniques"
+date: '2022-02-04'
+Venue: "Zaragoza University, Spain"
+categories:
+  - flavour physics
+  - bottom physics
+  - lattice QCD  
+---
+
+The Spanish lattice gauge theory community  meeting at the University of Zaragoza, Spain.
+

@@ -2,54 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bunniies.github.io/about.html</loc>
-    <lastmod>2023-12-28T10:23:52.886Z</lastmod>
+    <lastmod>2024-04-13T09:21:49.574Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/blog/articles/three-bodies-problem/index.html</loc>
+    <lastmod>2024-04-13T10:16:31.177Z</lastmod>
   </url>
   <url>
     <loc>https://bunniies.github.io/contents/about_me/about_me.html</loc>
-    <lastmod>2023-12-28T10:23:51.844Z</lastmod>
+    <lastmod>2024-04-13T09:21:47.606Z</lastmod>
   </url>
   <url>
-    <loc>https://bunniies.github.io/contents/publications/publist/Lat23-strategy/index.html</loc>
-    <lastmod>2023-12-28T10:23:51.284Z</lastmod>
+    <loc>https://bunniies.github.io/contents/talks/talkslist/lat22/index.html</loc>
+    <lastmod>2024-04-13T09:21:46.960Z</lastmod>
   </url>
   <url>
-    <loc>https://bunniies.github.io/contents/publications/publist/Lat22-charm/index.html</loc>
-    <lastmod>2023-12-28T10:23:50.730Z</lastmod>
+    <loc>https://bunniies.github.io/contents/talks/talkslist/zaragoza/index.html</loc>
+    <lastmod>2024-04-13T09:21:46.383Z</lastmod>
   </url>
   <url>
-    <loc>https://bunniies.github.io/contents/publications/publist/Lat23-results/index.html</loc>
-    <lastmod>2023-12-28T10:23:50.182Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bunniies.github.io/contents/publications/publist/Lat21-scalesetting/index.html</loc>
-    <lastmod>2023-12-28T10:23:49.588Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bunniies.github.io/contents/publications/index.html</loc>
-    <lastmod>2023-12-28T10:23:57.712Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bunniies.github.io/contents/publications/publist/Lat22-wtmcomparison/index.html</loc>
-    <lastmod>2023-12-28T10:23:49.886Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bunniies.github.io/contents/publications/publist/Lat21-charm/index.html</loc>
-    <lastmod>2023-12-28T10:23:50.465Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bunniies.github.io/contents/publications/publist/CharmPaper/index.html</loc>
-    <lastmod>2023-12-28T10:23:51.010Z</lastmod>
+    <loc>https://bunniies.github.io/contents/talks/talkslist/europlex-berlin/index.html</loc>
+    <lastmod>2024-04-13T10:16:34.924Z</lastmod>
   </url>
   <url>
     <loc>https://bunniies.github.io/contents/publications/publist/Lat22-scalesetting/index.html</loc>
-    <lastmod>2023-12-28T10:23:51.569Z</lastmod>
+    <lastmod>2024-04-13T09:21:45.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/publications/publist/Lat23-scalesetting/index.html</loc>
+    <lastmod>2024-04-13T09:21:44.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/publications/publist/Lat22-charm/index.html</loc>
+    <lastmod>2024-04-13T09:21:43.789Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/publications/publist/Lat23-results/index.html</loc>
+    <lastmod>2024-04-13T09:21:43.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/publications/publist/Lat21-scalesetting/index.html</loc>
+    <lastmod>2024-04-13T09:21:42.528Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/publications/index.html</loc>
+    <lastmod>2024-04-13T09:33:05.171Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/publications/publist/Lat22-wtmcomparison/index.html</loc>
+    <lastmod>2024-04-13T09:21:42.844Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/publications/publist/Lat21-charm/index.html</loc>
+    <lastmod>2024-04-13T09:21:43.486Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/publications/publist/CharmPaper/index.html</loc>
+    <lastmod>2024-04-13T09:21:44.113Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/publications/publist/Lat23-strategy/index.html</loc>
+    <lastmod>2024-04-13T09:21:44.758Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/talks/index.html</loc>
+    <lastmod>2024-04-13T09:22:01.209Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/talks/talkslist/lat21/index.html</loc>
+    <lastmod>2024-04-13T09:21:46.083Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/talks/talkslist/europlex-odense/index.html</loc>
+    <lastmod>2024-04-13T09:21:46.672Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/contents/talks/talkslist/lat23/index.html</loc>
+    <lastmod>2024-04-13T10:16:38.852Z</lastmod>
   </url>
   <url>
     <loc>https://bunniies.github.io/contents/about_me/index.html</loc>
-    <lastmod>2023-12-28T10:23:52.116Z</lastmod>
+    <lastmod>2024-04-13T09:29:16.021Z</lastmod>
   </url>
   <url>
     <loc>https://bunniies.github.io/index.html</loc>
-    <lastmod>2023-12-28T10:23:56.049Z</lastmod>
+    <lastmod>2024-04-13T11:17:19.954Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bunniies.github.io/blog/index.html</loc>
+    <lastmod>2024-04-13T09:21:58.896Z</lastmod>
   </url>
 </urlset>

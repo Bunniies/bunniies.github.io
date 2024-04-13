@@ -7,11 +7,25 @@
     "text": "This is the about me page\n\n\n\n\n Back to top"
   },
   {
+    "objectID": "blog/articles/three-bodies-problem/index.html",
+    "href": "blog/articles/three-bodies-problem/index.html",
+    "title": "The three-body problem",
+    "section": "",
+    "text": "A scene from the series. Source: Netflix\nRecently the streaming platform Netflix released the Three-body problem, an eight episodes sci-fi series based on Liu Cixin’s trilogy, the Remembrance of Earth’s Past. The series portrays, jumping from past, present and future, the interaction between the human race and an alien civilization living in a nearby star system . One of the main charachters soon realizes that the foreign culture lives in a three-body star system, where stable eras characterised by development and prosperity are followed by unpredictable chaotic eras where survival is almost impossible. In short, the technologically advanced creatures, tired of seeing their species threatened with extinction, come to the city seeking prosperity in a stable solar system at the expense of human survival. The story is based on a real nearby star system called Alpha Centauri. Located about 4 light-years from Earth, it’s the closest star system to us. It contains three stars: Alpha Centauri A and Alpha Centauri B, with masses similar to our sun, and a further red dwarf, Proxima Centauri, which has two planets orbiting it.\nThe three-body problem is a classical mechanics example of a chaotic dinamical system that puzzled and fascinated physicists for centuries. The difficulty is to predict with accuracy the dynamical evolution of the constituent bodies through the Newton’s law of universal gravitation. It turns out that the system is chaotic for the majority of conditions, and only a few stable solutions exists. As a result, numerical methods are required to solve the equations of motion. In this post we review the mathematical formulation of the problem, providing a Julia implementation for numerical integration."
+  },
+  {
+    "objectID": "blog/articles/three-bodies-problem/index.html#the-three-body-problem",
+    "href": "blog/articles/three-bodies-problem/index.html#the-three-body-problem",
+    "title": "The three-body problem",
+    "section": "The three-body problem",
+    "text": "The three-body problem\n\n\n\n\nFigure 1: Illustration of conic sections by slicing\na cone at different angles. Source: Labster\n\n\n\nAt the end of the seventeenth century the English physicist and mathematician Isaac Newton formulated in his work Philosophiæ Naturalis Principia Mathematica the law of universal gravitation, thus opening the door to celestial mechanics. Using Newton’s law of motion it is possible to compute exactly the orbits described by two gravitational interacting bodies. The allowed shapes for these orbits are obtained by slicing at different angles the conic sections, as illustrated in Figure 1. As we all know, the Earth describes an elliptic orbit under the Sun gravitational field. Newton’s law works just fine as long as we consider two interacting bodies in a closed system, therefore neglecting interactions with other celestial bodies. However as an additional object is introduced, small changes on the initial positions and velocities of the three bodies give rise to distinct dynamical evoulutions, and the system enter a chaotic phase where orbits do not follow a clear path and become unpredictables in the long term. There is no analytic formula that gives us instant by instant positions and velocities of the three bodies. This is known as the three body problem, a special case of the more general \\(n\\)-body problem. In what follows we stick to \\(n=3\\).\n\n\n\n\n\n\nNote\n\n\n\nIf the \\(n\\)-body problem with \\(n&gt;2\\) is a chaotic system, why do we live in a stable solar system with \\(8\\) planets and several celestial bodies orbiting around our star? The reason is simple: our sun contains roughly \\(99.8\\%\\) of the mass of the solar system! As a result, the gravitational interactions among planets are by far subleading\n\n\n\nMathematical formulation\nBefore jumping to the mathematical formulation of the three body problem, let us review the Newton’s law of universal gravitation: two massive bodies attracts each other with a force that is proportional to the product of their masses and inversely proportianal to the square of their distance. Let’s assume \\(m_1\\) and \\(m_2\\) to be the masses of the two bodies, located in space at postion \\(\\mathbf{r}_1\\) and \\(\\mathbf{r}_2\\), with \\(\\mathbf{r}_i=(x_i, y_i, z_i)\\) being a vector position with three spacial components. Together with Newton’s second law of motion \\(F=ma\\), the equation describing the dynamics of the body \\(m_1\\) under the gravitational influence of \\(m_2\\) thus takes the form\n\\[\nF_1 = m_1\\mathbf{\\ddot r}_1 = -G \\frac{m_1m_2}{(\\mathbf{r}_1 - \\mathbf{r_2})^2}.\n\\] Here \\(G\\) is the gravitational constant, while \\(mathbf{\\ddot r}_1\\) is the body acceleration expressed in terms of the second temporal derivative of the position\n\\[\n\\mathbf{\\ddot r}_1 =  - Gm_3\\frac{\\mathbf{r}_{1}-\\mathbf{r}_3}{|\\mathbf{r}_{1}-\\mathbf{r}_3|^3} - Gm_2\\frac{\\mathbf{r}_{1}-\\mathbf{r}_2}{|\\mathbf{r}_{1}-\\mathbf{r}_2|^3}\n\\] \\[\n\\mathbf{\\ddot r}_2 =   - Gm_1\\frac{\\mathbf{r}_{2}-\\mathbf{r}_1}{|\\mathbf{r}_{2}-\\mathbf{r}_1|^3} - Gm_3\\frac{\\mathbf{r}_{2}-\\mathbf{r}_3}{|\\mathbf{r}_{2}-\\mathbf{r}_3|^3}\n\\] \\[\n\\mathbf{\\ddot r}_3 =   - Gm_2\\frac{\\mathbf{r}_{3}-\\mathbf{r}_1}{|\\mathbf{r}_{3}-\\mathbf{r}_1|^3} -Gm_1\\frac{\\mathbf{r}_{3}-\\mathbf{r}_1}{|\\mathbf{r}_{3}-\\mathbf{r}_1|^3}\n\\]\nOur goal is to determine the positions and velocieties of the three bodies at some time \\(t\\) by solving numerically the above equations, given some initial conditions \\(\\mathbf{r}_i(t_0), \\ \\mathbf{\\dot r}_i(t_0)\\) at \\(t_0=0\\)\n\n\nhey"
+  },
+  {
     "objectID": "contents/about_me/about_me.html",
     "href": "contents/about_me/about_me.html",
     "title": "Alessandro Conigli",
     "section": "",
-    "text": "PostDoctoral researcher in theoretical particle physics at Helmholtz Institute Mainz"
+    "text": "PostDoctoral researcher in theoretical particle physics at Helmholtz Institute Mainz. My research is focused on the non-perturbative aspects of Quantum Chromodynamics (QCD), a theory describing the strong interaction in fundamental particle physics. My work is performed with lattice field theory techniques to tackle the non-perturbative phenomena of QCD. In Lattice QCD the continuum space-time is discretized onto a grid-like structure, allowing to perform numerical simulations in large-scale computational facilities to solve the QCD equations. This approach is particularly useful for understanding phenomena at low energies, where perturbative methods may not be as effective.\nA list of main topics includes:"
   },
   {
     "objectID": "contents/about_me/about_me.html#experience",
@@ -28,18 +42,53 @@
     "text": "Education\n\nInstituto de Física Teórica, Madrid (ES)\nPh.D. in theoretical particle physics | 2019 - 2023\nMarie Skłodowska Curie ITN EuroPLEx\nBologna University, Bologna (IT)\nMaster in theoretical physics | 2016 - 2019\nBologna University, Bologna (IT)\nBachelor in physics | 2013 - 2016"
   },
   {
-    "objectID": "contents/publications/publist/Lat23-strategy/index.html",
-    "href": "contents/publications/publist/Lat23-strategy/index.html",
-    "title": "A strategy for B-physics observables in the continuum limit",
+    "objectID": "contents/talks/talkslist/lat22/index.html",
+    "href": "contents/talks/talkslist/lat22/index.html",
+    "title": "Towards precision charm physics with a mixed action",
     "section": "",
-    "text": "In a somewhat forgotten paper [1] it was shown how to perform interpolations between relativistic and static computations in order to obtain results for heavy-light observables for masses from, say, \\(m_{\\mathrm{charm}}\\) to \\(m_{\\mathrm{bottom}}\\). All quantities are first continuum extrapolated and then interpolated in \\(1/m_h = 1 / m_{\\mathrm{heavy}}\\). Large volume computations are combined with finite volume ones where a relativistic bottom quark is accessible with small \\(am_{\\mathrm{bottom}}\\). We discuss how this strategy is extended to semi-leptonic form factors and other quantities of phenomenological interest. The essential point is to form quantities where the limit \\(m_h\\to \\infty\\) is approached with power corrections \\(O(1/m_h)\\) only. Perturbative corrections \\(\\sim \\alpha_s(m_h)^{\\gamma + n }\\) are cancelled in the construction of the observables. We also point out how such an approach can help to control systematics in semi-leptonic decays with just large volume data. First numerical results with \\(N_f=2+1\\) and lattice spacings down to 0.039 fm are presented in [2].\nFull paper: please download the available versions here."
+    "text": "The 39th International Symposium on Lattice Field Theory in Bonn, Germany.\nYou can find the slides at the following link.\nAlternatively, the conference paper is available here.\n\n\n\n Back to top"
   },
   {
-    "objectID": "contents/publications/publist/Lat23-strategy/index.html#abstract",
-    "href": "contents/publications/publist/Lat23-strategy/index.html#abstract",
-    "title": "A strategy for B-physics observables in the continuum limit",
+    "objectID": "contents/talks/talkslist/zaragoza/index.html",
+    "href": "contents/talks/talkslist/zaragoza/index.html",
+    "title": "B to pi form factors with step scaling techniques",
     "section": "",
-    "text": "In a somewhat forgotten paper [1] it was shown how to perform interpolations between relativistic and static computations in order to obtain results for heavy-light observables for masses from, say, \\(m_{\\mathrm{charm}}\\) to \\(m_{\\mathrm{bottom}}\\). All quantities are first continuum extrapolated and then interpolated in \\(1/m_h = 1 / m_{\\mathrm{heavy}}\\). Large volume computations are combined with finite volume ones where a relativistic bottom quark is accessible with small \\(am_{\\mathrm{bottom}}\\). We discuss how this strategy is extended to semi-leptonic form factors and other quantities of phenomenological interest. The essential point is to form quantities where the limit \\(m_h\\to \\infty\\) is approached with power corrections \\(O(1/m_h)\\) only. Perturbative corrections \\(\\sim \\alpha_s(m_h)^{\\gamma + n }\\) are cancelled in the construction of the observables. We also point out how such an approach can help to control systematics in semi-leptonic decays with just large volume data. First numerical results with \\(N_f=2+1\\) and lattice spacings down to 0.039 fm are presented in [2].\nFull paper: please download the available versions here."
+    "text": "The Spanish lattice gauge theory community meeting at the University of Zaragoza, Spain.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/talks/talkslist/europlex-berlin/index.html",
+    "href": "contents/talks/talkslist/europlex-berlin/index.html",
+    "title": "B physics observables in the continuum from a combination of static and relativistic results",
+    "section": "",
+    "text": "The EuroPLEx network international conference at Humboldt-Universität zu Berlin\nYou can find the slides at the following link.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/publications/publist/Lat22-scalesetting/index.html",
+    "href": "contents/publications/publist/Lat22-scalesetting/index.html",
+    "title": "Scale Setting from a Mixed Action with Twisted Mass Valence Quarks",
+    "section": "",
+    "text": "We present preliminary results for a scale setting procedure based on a mixed action strategy consisting of Wilson twisted mass valence fermions at maximal twist on CLS ensembles with \\(N_f=2+1\\) flavours of \\(O(a)\\)-improved Wilson sea quarks. Once the matching of valence and sea quark masses is performed, universality tests are carried out by comparing the continuum-limit results of the mixed action setup to those of the regularisation based solely on \\(O(a)\\)-improved Wilson fermions. The scale setting uses the pion and kaon decay constants, in units of the gradient flow scale \\(t_0\\), obtained from combining computations with the unitary Wilson action and the mixed action. The proper isolation of ground states as well as the continuum-chiral extrapolations are evaluated through model variation techniques. An update on the determination of \\(t_0\\) will be presented.\nFull paper: please download the available versions here."
+  },
+  {
+    "objectID": "contents/publications/publist/Lat22-scalesetting/index.html#abstract",
+    "href": "contents/publications/publist/Lat22-scalesetting/index.html#abstract",
+    "title": "Scale Setting from a Mixed Action with Twisted Mass Valence Quarks",
+    "section": "",
+    "text": "We present preliminary results for a scale setting procedure based on a mixed action strategy consisting of Wilson twisted mass valence fermions at maximal twist on CLS ensembles with \\(N_f=2+1\\) flavours of \\(O(a)\\)-improved Wilson sea quarks. Once the matching of valence and sea quark masses is performed, universality tests are carried out by comparing the continuum-limit results of the mixed action setup to those of the regularisation based solely on \\(O(a)\\)-improved Wilson fermions. The scale setting uses the pion and kaon decay constants, in units of the gradient flow scale \\(t_0\\), obtained from combining computations with the unitary Wilson action and the mixed action. The proper isolation of ground states as well as the continuum-chiral extrapolations are evaluated through model variation techniques. An update on the determination of \\(t_0\\) will be presented.\nFull paper: please download the available versions here."
+  },
+  {
+    "objectID": "contents/publications/publist/Lat23-scalesetting/index.html",
+    "href": "contents/publications/publist/Lat23-scalesetting/index.html",
+    "title": "Determination of the Gradient Flow Scale \\(t_0\\) from a Mixed Action with Wilson Twisted Mass Valence Quarks",
+    "section": "",
+    "text": "We perform the scale setting procedure of a mixed action setup consisting of valence Wilson twisted mass fermions at maximal twist on CLS ensembles with \\(N_f=2+1\\) flavours of \\(O(a)\\)-improved Wilson sea quarks. We determine the gradient flow scale \\(t_0\\)​\nusing pion and kaon masses and decay constants in the isospin symmetric limit of QCD as external physical input. We employ model variation techniques to explore the systematic uncertainties in the extraction of the ground state signal of lattice observables, as well as for the continuum-chiral extrapolations. We observe that the combined analysis of the mixed action data with that based on \\(O(a)\\)-improved Wilson valence quarks, provides an improved control of the extrapolation of \\(t_0\\) to the physical point.\nFull paper: please download the available versions here."
+  },
+  {
+    "objectID": "contents/publications/publist/Lat23-scalesetting/index.html#abstract",
+    "href": "contents/publications/publist/Lat23-scalesetting/index.html#abstract",
+    "title": "Determination of the Gradient Flow Scale \\(t_0\\) from a Mixed Action with Wilson Twisted Mass Valence Quarks",
+    "section": "",
+    "text": "We perform the scale setting procedure of a mixed action setup consisting of valence Wilson twisted mass fermions at maximal twist on CLS ensembles with \\(N_f=2+1\\) flavours of \\(O(a)\\)-improved Wilson sea quarks. We determine the gradient flow scale \\(t_0\\)​\nusing pion and kaon masses and decay constants in the isospin symmetric limit of QCD as external physical input. We employ model variation techniques to explore the systematic uncertainties in the extraction of the ground state signal of lattice observables, as well as for the continuum-chiral extrapolations. We observe that the combined analysis of the mixed action data with that based on \\(O(a)\\)-improved Wilson valence quarks, provides an improved control of the extrapolation of \\(t_0\\) to the physical point.\nFull paper: please download the available versions here."
   },
   {
     "objectID": "contents/publications/publist/Lat22-charm/index.html",
@@ -88,7 +137,7 @@
     "href": "contents/publications/index.html",
     "title": "Publications",
     "section": "",
-    "text": "Here is a list of featured publications.\nFor more details see my hep-inspire or Google scholar profiles.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nPublished in\n\n\nDate\n\n\n\n\n\n\n\\(m_B\\) and \\(f_{B^{(*)}}\\) in \\(2+1\\) flavour QCD from a combination of continuum limit static and relativistic results\n\n\nProceedings of Science\n\n\n2023\n\n\n\n\nA strategy for B-physics observables in the continuum limit\n\n\nProceedings of Science\n\n\n2023\n\n\n\n\nHadronic physics from a Wilson fermion mixed-action approach: Charm quark mass and \\(D_{(s)}\\) meson decay constants\n\n\npreprint\n\n\n2023\n\n\n\n\nA comparison of Wilson and twisted mass valence quarks for charmed semileptonic form factors\n\n\nProceedings of Science\n\n\n2023\n\n\n\n\nTowards precision charm physics with a mixed action\n\n\nProceedings of Science\n\n\n2022\n\n\n\n\nScale Setting from a Mixed Action with Twisted Mass Valence Quarks\n\n\nProceedings of Science\n\n\n2022\n\n\n\n\nLight meson physics and scale setting from a mixed action with Wilson twisted mass valence quarks\n\n\nProceedings of Science\n\n\n2022\n\n\n\n\nCharm physics with a tmQCD mixed action\n\n\nProceedings of Science\n\n\n2021\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Here is a list of featured publications.\nFor more details see my hep-inspire or Google scholar profiles.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nPublished in\n\n\nDate\n\n\n\n\n\n\nDetermination of the Gradient Flow Scale \\(t_0\\) from a Mixed Action with Wilson Twisted Mass Valence Quarks\n\n\nProceedings of Science\n\n\n2024\n\n\n\n\n\\(m_B\\) and \\(f_{B^{(*)}}\\) in \\(2+1\\) flavour QCD from a combination of continuum limit static and relativistic results\n\n\nProceedings of Science\n\n\n2023\n\n\n\n\nA strategy for B-physics observables in the continuum limit\n\n\nProceedings of Science\n\n\n2023\n\n\n\n\nHadronic physics from a Wilson fermion mixed-action approach: Charm quark mass and \\(D_{(s)}\\) meson decay constants\n\n\npreprint\n\n\n2023\n\n\n\n\nA comparison of Wilson and twisted mass valence quarks for charmed semileptonic form factors\n\n\nProceedings of Science\n\n\n2023\n\n\n\n\nTowards precision charm physics with a mixed action\n\n\nProceedings of Science\n\n\n2022\n\n\n\n\nScale Setting from a Mixed Action with Twisted Mass Valence Quarks\n\n\nProceedings of Science\n\n\n2022\n\n\n\n\nLight meson physics and scale setting from a mixed action with Wilson twisted mass valence quarks\n\n\nProceedings of Science\n\n\n2022\n\n\n\n\nCharm physics with a tmQCD mixed action\n\n\nProceedings of Science\n\n\n2021\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "contents/publications/publist/Lat22-wtmcomparison/index.html",
@@ -133,25 +182,53 @@
     "text": "We present our first set of results for charm physics, using the mixed-action setup introduced in a companion paper. Maximally twisted Wilson valence fermions are used on a sea of non-perturbatively \\(O(a)\\)-improved Wilson fermions, made up by CLS \\(N_f=2+1\\) ensembles. Our charm-sector observables are free from \\(O(am_c)\\) discretisation effects, without need of tuning any improvement coefficient, and show continuum-limit scaling properties consistent with leading cutoff effects of \\(O(a^2)\\). We consider a subset of CLS ensembles – including four values of the lattice spacing and pion masses down to 200 MeV – allowing to take the continuum limit and extrapolate to the physical pion mass. A number of techniques are incorporated in the analysis in order to estimate the systematic uncertainties of our results for the charm quark mass and the \\(D_{(s)}\\)-meson decay constants. This first study of observables in the charm sector, where the emphasis has been on the control of the methodology, demonstrates the potential of our setup to achieve high-precision results.\nFull paper: please download the available versions here."
   },
   {
-    "objectID": "contents/publications/publist/Lat22-scalesetting/index.html",
-    "href": "contents/publications/publist/Lat22-scalesetting/index.html",
-    "title": "Scale Setting from a Mixed Action with Twisted Mass Valence Quarks",
+    "objectID": "contents/publications/publist/Lat23-strategy/index.html",
+    "href": "contents/publications/publist/Lat23-strategy/index.html",
+    "title": "A strategy for B-physics observables in the continuum limit",
     "section": "",
-    "text": "We present preliminary results for a scale setting procedure based on a mixed action strategy consisting of Wilson twisted mass valence fermions at maximal twist on CLS ensembles with \\(N_f=2+1\\) flavours of \\(O(a)\\)-improved Wilson sea quarks. Once the matching of valence and sea quark masses is performed, universality tests are carried out by comparing the continuum-limit results of the mixed action setup to those of the regularisation based solely on \\(O(a)\\)-improved Wilson fermions. The scale setting uses the pion and kaon decay constants, in units of the gradient flow scale \\(t_0\\), obtained from combining computations with the unitary Wilson action and the mixed action. The proper isolation of ground states as well as the continuum-chiral extrapolations are evaluated through model variation techniques. An update on the determination of \\(t_0\\) will be presented.\nFull paper: please download the available versions here."
+    "text": "In a somewhat forgotten paper [1] it was shown how to perform interpolations between relativistic and static computations in order to obtain results for heavy-light observables for masses from, say, \\(m_{\\mathrm{charm}}\\) to \\(m_{\\mathrm{bottom}}\\). All quantities are first continuum extrapolated and then interpolated in \\(1/m_h = 1 / m_{\\mathrm{heavy}}\\). Large volume computations are combined with finite volume ones where a relativistic bottom quark is accessible with small \\(am_{\\mathrm{bottom}}\\). We discuss how this strategy is extended to semi-leptonic form factors and other quantities of phenomenological interest. The essential point is to form quantities where the limit \\(m_h\\to \\infty\\) is approached with power corrections \\(O(1/m_h)\\) only. Perturbative corrections \\(\\sim \\alpha_s(m_h)^{\\gamma + n }\\) are cancelled in the construction of the observables. We also point out how such an approach can help to control systematics in semi-leptonic decays with just large volume data. First numerical results with \\(N_f=2+1\\) and lattice spacings down to 0.039 fm are presented in [2].\nFull paper: please download the available versions here."
   },
   {
-    "objectID": "contents/publications/publist/Lat22-scalesetting/index.html#abstract",
-    "href": "contents/publications/publist/Lat22-scalesetting/index.html#abstract",
-    "title": "Scale Setting from a Mixed Action with Twisted Mass Valence Quarks",
+    "objectID": "contents/publications/publist/Lat23-strategy/index.html#abstract",
+    "href": "contents/publications/publist/Lat23-strategy/index.html#abstract",
+    "title": "A strategy for B-physics observables in the continuum limit",
     "section": "",
-    "text": "We present preliminary results for a scale setting procedure based on a mixed action strategy consisting of Wilson twisted mass valence fermions at maximal twist on CLS ensembles with \\(N_f=2+1\\) flavours of \\(O(a)\\)-improved Wilson sea quarks. Once the matching of valence and sea quark masses is performed, universality tests are carried out by comparing the continuum-limit results of the mixed action setup to those of the regularisation based solely on \\(O(a)\\)-improved Wilson fermions. The scale setting uses the pion and kaon decay constants, in units of the gradient flow scale \\(t_0\\), obtained from combining computations with the unitary Wilson action and the mixed action. The proper isolation of ground states as well as the continuum-chiral extrapolations are evaluated through model variation techniques. An update on the determination of \\(t_0\\) will be presented.\nFull paper: please download the available versions here."
+    "text": "In a somewhat forgotten paper [1] it was shown how to perform interpolations between relativistic and static computations in order to obtain results for heavy-light observables for masses from, say, \\(m_{\\mathrm{charm}}\\) to \\(m_{\\mathrm{bottom}}\\). All quantities are first continuum extrapolated and then interpolated in \\(1/m_h = 1 / m_{\\mathrm{heavy}}\\). Large volume computations are combined with finite volume ones where a relativistic bottom quark is accessible with small \\(am_{\\mathrm{bottom}}\\). We discuss how this strategy is extended to semi-leptonic form factors and other quantities of phenomenological interest. The essential point is to form quantities where the limit \\(m_h\\to \\infty\\) is approached with power corrections \\(O(1/m_h)\\) only. Perturbative corrections \\(\\sim \\alpha_s(m_h)^{\\gamma + n }\\) are cancelled in the construction of the observables. We also point out how such an approach can help to control systematics in semi-leptonic decays with just large volume data. First numerical results with \\(N_f=2+1\\) and lattice spacings down to 0.039 fm are presented in [2].\nFull paper: please download the available versions here."
+  },
+  {
+    "objectID": "contents/talks/index.html",
+    "href": "contents/talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Here is a list of talks at difference Conferences.\nFor the related papers see my hep-inspire or Google scholar profiles.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nVenue\n\n\nDate\n\n\n\n\n\n\nB physics observables in the continuum from a combination of static and relativistic results\n\n\nHumboldt-Universität zu Berlin\n\n\n2023\n\n\n\n\n\\(m_B\\) and \\(f_{B^(*)}\\) on \\(2+1\\) flavor QCD from a combination of continuum limit static and relativistic results\n\n\nFemilab, Batavia (IL), USA\n\n\n2023\n\n\n\n\nTowards precision charm physics with a mixed action\n\n\nBonn, Germany\n\n\n2022\n\n\n\n\nHeavy flavour physics with CLS ensembles\n\n\nCP3-Origins, Odense, Denmark\n\n\n2022\n\n\n\n\nB to pi form factors with step scaling techniques\n\n\nZaragoza University, Spain\n\n\n2022\n\n\n\n\nCharm physics with tmQCD mixed action\n\n\nonline@MIT\n\n\n2021\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "contents/talks/talkslist/lat21/index.html",
+    "href": "contents/talks/talkslist/lat21/index.html",
+    "title": "Charm physics with tmQCD mixed action",
+    "section": "",
+    "text": "The 38th International Symposium on Lattice Field Theory at zoom/gather@MIT\nYou can find the slides at the following link.\nAlternatively, the conference paper is available here.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/talks/talkslist/europlex-odense/index.html",
+    "href": "contents/talks/talkslist/europlex-odense/index.html",
+    "title": "Heavy flavour physics with CLS ensembles",
+    "section": "",
+    "text": "The EuroPLEx network progress workshop in Odense, Denmark\nYou can find more details at the following link.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contents/talks/talkslist/lat23/index.html",
+    "href": "contents/talks/talkslist/lat23/index.html",
+    "title": "\\(m_B\\) and \\(f_{B^(*)}\\) on \\(2+1\\) flavor QCD from a combination of continuum limit static and relativistic results",
+    "section": "",
+    "text": "The 40th International Symposium on Lattice Field Theory at Fermilab, Batavia, Illinois (USA).\nYou can find the slides at the following link.\nAlternatively, the conference paper is available here.\n\n\n\n Back to top"
   },
   {
     "objectID": "contents/about_me/index.html",
     "href": "contents/about_me/index.html",
     "title": "Alessandro Conigli",
     "section": "",
-    "text": "PostDoctoral researcher in theoretical particle physics at Helmholtz Institute Mainz"
+    "text": "PostDoctoral researcher in theoretical particle physics at Helmholtz Institute Mainz. My research is focused on the non-perturbative aspects of Quantum Chromodynamics (QCD), a theory describing the strong interaction in fundamental particle physics. My work is performed with lattice field theory techniques to tackle the non-perturbative phenomena of QCD. In Lattice QCD the continuum space-time is discretized onto a grid-like structure, allowing to perform numerical simulations in large-scale computational facilities to solve the QCD equations. This approach is particularly useful for understanding phenomena at low energies, where perturbative methods may not be as effective.\nA list of main topics includes:"
   },
   {
     "objectID": "contents/about_me/index.html#experience",
@@ -170,8 +247,29 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Hello World, it’s Bunnies",
+    "title": "Welcome!",
     "section": "",
-    "text": "Hello World, it’s Bunnies\nThis is an example page\n\n\n\n\n Back to top"
+    "text": "I am a PostDoc researcher in theoretical particle physics at Helmholtz Institute Mainz. With a background in theoretical physics and a Ph.D. in Lattice QCD, a well-established approach to tackle the non-perturbative phenomena of Quantum Chromodynamics (QCD), my research employes advanced computational techniques to simulate the behaviour of subatomic particles. In Lattice QCD the continuum space-time is discretized onto a grid-like structure, allowing to perform numerical simulations in large-scale computational facilities to solve the QCD equations, sheding lights on the dynamics of the strong nuclear force.\nMy research interests include:\n\nLattice QCD\nParticle Phenomenology\n\nHadronic Vacuum Polarization, in the context of g-2 experiment at Fermilab\nMachine Learning in particle physics\nComputational physics\n\n\n\n\nIn my most recent post I give an overview of the Three-body problem in classical mechanics, providing Julia implementation for its numerical solutions.\nOn the 28th of September 2023 I defended my Ph.D thesis at the Instituto de Física Teórica in Madrid, Spain with a thesis entitled “First-principles calculations of Standard Model parameters at the charm scale and beyond”. Check out here for additional details!"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Articles",
+    "section": "",
+    "text": "The three-body problem\n\n\nA chaotic dynamical system\n\n\nThe three-body problem in classical mechanics is an example of a chaotic dynamical system that puzzled physisics for centuries. This post gives an overview of the problem in celestial mechanics and provides a Julia code for numerical simulation. Are there any long term stable solutions?\n\n\n\n\n\n\nMay 4, 2024\n\n\n4 min\n\n\n4/10/24, 7:48:15 PM\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Alessandro Conigli",
+    "section": "",
+    "text": "This is an example page"
+  },
+  {
+    "objectID": "index.html#news",
+    "href": "index.html#news",
+    "title": "Welcome!",
+    "section": "",
+    "text": "In my most recent post I give an overview of the Three-body problem in classical mechanics, providing Julia implementation for its numerical solutions.\nOn the 28th of September 2023 I defended my Ph.D thesis at the Instituto de Física Teórica in Madrid, Spain with a thesis entitled “First-principles calculations of Standard Model parameters at the charm scale and beyond”. Check out here for additional details!"
   }
 ]
